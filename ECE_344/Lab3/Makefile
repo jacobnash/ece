@@ -1,0 +1,29 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: Lab 3.mcp
+# Date: Thu Mar 19 17:00:18 2015
+
+AS = xc32-as.exe
+CC = xc32-gcc.exe
+LD = xc32-ld.exe
+AR = xc32-ar.exe
+HX = xc32-bin2hex.exe
+RM = rm
+
+Lab\ 3.hex : Lab\ 3.elf
+	$(HX) "Lab 3.elf"
+
+Lab\ 3.elf : Lab3-1.o Lab3-1-ISR.o Lab3-2-VT.o
+	$(CC) -mdebugger -mprocessor=32MX460F512L "Lab3-1.o" "Lab3-1-ISR.o" "Lab3-2-VT.o" -o"Lab 3.elf" -Wl,-L"C:\Program Files (x86)\Microchip\xc32\v1.32\pic32mx\lib",--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,--defsym=__ICD2RAM=1,-Map="Lab 3.map"
+
+Lab3-1.o : Lab3-1.S
+	$(CC) -mprocessor=32MX460F512L -c -MMD -MF"Lab3-1.d" -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 "Lab3-1.S" -o"Lab3-1.o" -Wa,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-gdwarf-2
+
+Lab3-1-ISR.o : Lab3-1-ISR.S
+	$(CC) -mprocessor=32MX460F512L -c -MMD -MF"Lab3-1-ISR.d" -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 "Lab3-1-ISR.S" -o"Lab3-1-ISR.o" -Wa,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-gdwarf-2
+
+Lab3-2-VT.o : Lab3-2-VT.S
+	$(CC) -mprocessor=32MX460F512L -c -MMD -MF"Lab3-2-VT.d" -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 "Lab3-2-VT.S" -o"Lab3-2-VT.o" -Wa,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-gdwarf-2
+
+clean : 
+	$(RM) "Lab3-1.o" "Lab3-1-ISR.o" "Lab3-2-VT.o" "Lab 3.elf" "Lab 3.hex"
+
