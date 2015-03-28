@@ -1,29 +1,19 @@
 #include <p32xxxx.h>
-
 .global main
-
 .data
-
 .text
-
 .ent main 
-
-
 main:
-	####################
-	###REG CLEAR PROC###
-	####################
-	and	t0, t0, zero
-	and	t1, t1, zero
-	and	t2, t2, zero
-	and	t3, t3, zero
-	and	t4, t4, zero
-	and	t5, t5, zero
-	and	t6, t6, zero
-	and	t7, t7, zero
-	and	t8, t8, zero
-	and	t9, t9, zero
-	nop	
+	and t0, t0, zero
+	and t1, t1, zero
+	and t2, t2, zero
+	and t3, t3, zero
+	and t4, t4, zero
+	and t5, t5, zero
+	and t6, t6, zero
+	and t7, t7, zero
+	and t8, t8, zero
+	and t9, t9, zero	
 	and s0, s0, zero
 	and s1, s1, zero
 	and s2, s2, zero
@@ -32,7 +22,6 @@ main:
 	and s5, s5, zero
 	and s6, s6, zero
 	and s7, s7, zero
-	nop
 	and a0, a0, zero
 	and a1, a1, zero
 	and a2, a2, zero
@@ -42,16 +31,16 @@ main:
 	la t4, 0xA0000400
 
 	#UART Setup:	
-	Lw t1, U2MODE			#clear UARTB
+	lw t1, U2MODE			#clear UARTB
 	sw zero, U2TXREG		#clear transmit register
 	sw zero, U2RXREG		#clear recieve register
 	ori t0, t1, 0x8B00	    #load bit pattern 1001101100000000
 	sw t0, U2MODE			#set bits in UARTB
-	ori t0, zero, 0x08		#load BRG bits for baud rate of 2400
+	li t0, 0x08		#load BRG bits for baud rate of 2400
 	sw t0, U2BRG			#set BRG bits
 	li s0, 0x01				#UART status check
 	li s1, 0x200			#UART tx buffer check
-	ori t0, zero, 0x1440	#set enable bits for  status register
+	li t0, 0x1440	#set enable bits for  status register
 	sw t0, U2STA			#clear and set status register of uart
 
 	#Interrupt Setup:
@@ -66,10 +55,10 @@ main:
 	sw t6, 0x70(t5)			#store UART inturrupt flag enable 
 	li t6, 0x1A				#load priority bits
 	sw t6, 0x110(t5)		#store priority bits
-	li t6, 0x9FC01000		#load ebase
-	mtc0 t6, $15, 0x01		#set ebase
+	#li t6, 0x9FC01000		#load ebase
+	#mtc0 t6, $15, 0x01		#set ebase
 	#li s2, 0x01			#load vector spacing bits
-    #mtc0 s2, $12, 0x01		#store vector spacing bits
+        #mtc0 s2, $12, 0x01		#store vector spacing bits
 	
 	ei						#enable interrups 
 
