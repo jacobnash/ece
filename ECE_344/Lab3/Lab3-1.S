@@ -8,7 +8,7 @@ main:
 	li s0,0xBF800000     # base address for UART
 	li t1,0x20           # t1 is used multiple times as temp storage
 	sw t1,0x6240(s0)     # 0x20 (baud=19200) -> U2BRG (offset 6240)
-	li t1,0x1440         # set bits 10,12 (UTXEN, URXEN) on
+	li t1,0x1400         # set bits 10,12 (UTXEN, URXEN) on
 	sw t1,0x6210(s0)     # 0x1400 -> U2STA SET reg address
 	li t1,0x8B00         # set bits 15(ON) 11(RTSMD) 9:8 (UEN)
 	sw t1,0x6200(s0)     # 0x8B00 -> MODE (offset=6200)
