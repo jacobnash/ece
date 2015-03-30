@@ -1,4 +1,3 @@
-
 .section .config_BFC02FF4,code
 .word 0xfff8ffd9
 
