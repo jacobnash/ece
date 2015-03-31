@@ -7,10 +7,9 @@
 .ent ISR_UART
 
 ISR_UART:
-	lw t9, U2RXREG		#retrieve char from RX register
-	sw t9, MailBox  	#store char in mailbox
-	sw zero, IFS1		#clear flag
-	nop			
-	eret				#return to main
+	sw zero, IFS1		#Clear interrupt flag
+	lw t9, U2RXREG		#Retrieve char from RX register
+	sw t9, MailBox		#Store char in mailbox
+	eret			#Return to main
 	nop	
 .end ISR_UART
