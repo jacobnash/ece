@@ -9,7 +9,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
-SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S||<obj>||<lib>||<lkr>||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-gdwarf-2
 TraceCmdString=
@@ -22,7 +22,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
-SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S||<obj>||<lib>||<lkr>||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-gdwarf-2
 TraceCmdString=
@@ -35,7 +35,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
-SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S||<obj>||<lib>||<lkr>||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-gdwarf-2
 TraceCmdString=
@@ -48,12 +48,25 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
-SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S||<obj>||<lib>||<lkr>||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-gdwarf-2
 TraceCmdString=
 DebugOptions=--defsym=__DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1
 [File004]
+Location=E:\Spring_2015\ECE_344L\Labs\Lab_6\PRINT_STRING.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-gdwarf-2
+TraceCmdString=
+DebugOptions=--defsym=__DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1
+[File005]
 Location=E:\Spring_2015\ECE_344L\Labs\Lab_6\lab_6_project.elf
 Folder=Output
 DeviceName=PIC32MX460F512L
@@ -61,12 +74,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
-SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S||<obj>||<lib>||<lkr>||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
 TraceCmdString=
 DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1 --defsym=__ICD2RAM=1
-[File005]
+[File006]
 Location=E:\Spring_2015\ECE_344L\Labs\Lab_6\lab_6_project.hex
 Folder=Output
 DeviceName=PIC32MX460F512L
@@ -74,7 +87,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
-SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S||<obj>||<lib>||<lkr>||
+SOLK=<src>|config.S|SET_TIME.S|VECTOR.S|ISR_UART.S|PRINT_STRING.S||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
 TraceCmdString=
